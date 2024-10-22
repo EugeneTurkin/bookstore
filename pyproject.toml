@@ -1,0 +1,37 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+
+[tool.poetry]
+authors = ["Eugene Turkin <eugeneturkin@gmail.com>"]
+description = ""
+name = "bookstore"
+readme = "README.md"
+version = "0.1.0"
+
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+
+
+[tool.poetry.group.app]
+optional = true
+
+
+[tool.poetry.group.app.dependencies]
+django = "5.1.2"
+django-environ = "0.11.2"
+djangorestframework = "3.15.2"
+psycopg2-binary = "2.9.10"
+
+
+[tool.poetry.group.lint]
+optional = true
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "7.1.1"
+mypy = "1.12.0"
+pylint = "3.3.1"
+ruff = "0.6.9"
